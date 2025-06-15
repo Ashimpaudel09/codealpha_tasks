@@ -1,0 +1,81 @@
+/* Light mode (default) */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.agecalculator {
+  background-color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+h1#calc {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+input[type="date"] {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+input[type="date"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+#age {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Dark mode with subtle linear gradient */
+@media (prefers-color-scheme: dark) {
+  body {
+    /* Light dark gradient background */
+    background: linear-gradient(135deg, #2c3e50, #4b6cb7);
+    color: #d1d9e6;
+  }
+
+  .agecalculator {
+    background: linear-gradient(145deg, #3a5068, #5bc0be);
+    box-shadow: 0 4px 20px rgba(27, 38, 58, 0.4);
+  }
+
+  input[type="date"] {
+    background-color: rgba(255 255 255 / 0.15);
+    border-color: rgba(255 255 255 / 0.3);
+    color: #d1d9e6;
+    backdrop-filter: blur(5px);
+  }
+
+  input[type="date"]:focus {
+    border-color: #a3cef1;
+    background-color: rgba(163 206 241 / 0.2);
+    color: #d1d9e6;
+  }
+}
